@@ -11,7 +11,7 @@ in development (for now...)
 go functions to javascript
 
 * I implemented a simple pomodoro app using `Elma` is located at
-`exs/pomodoro` I think it is a good source for getting the idae of
+`exs/pomodoro` I think it is a good source for getting the idea of
 how to use `Elma`
 ```bash
 go run . ./exs/pomodoro
@@ -50,3 +50,5 @@ a := Person{
     12,
 }
 ```
+---
+Have fun!
