@@ -164,6 +164,7 @@ func (gen *Gen) GenStmt(stmt ast.Stmt) string {
         case *ast.IncDecStmt: return gen.GenIncDecStmt(t)
         case *ast.SwitchStmt: return gen.GenSwitchStmt(t)
         case *ast.CaseClause: return gen.GenCaseClause(t)
+        case *ast.BranchStmt: return gen.GenBranchStmt(t)
         case *ast.RangeStmt: return gen.GenRangeStmt(t)
         case *ast.BlockStmt: return gen.GenBlockStmt(t)
         case nil: return ""
@@ -249,6 +250,10 @@ func (gen *Gen) GenCaseClause(expr *ast.CaseClause) string {
     }
     out += "}"
     return out
+}
+
+func (gen *Gen) GenBranchStmt(expr *ast.BranchStmt) string {
+    return expr.Tok.String()
 }
 
 func (gen *Gen) GenSwitchStmt(expr *ast.SwitchStmt) string {

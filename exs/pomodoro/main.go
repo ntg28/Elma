@@ -85,9 +85,15 @@ func (timer Timer) WhenOver(f func ()) {
 
 func (timer Timer) SetTime() {
     switch (timer.mode) {
-        case ModeSession: timer.time = timer.defaultSession
-        case ModeBreak: timer.time = timer.defaultBreak
-        case ModeLongBreak: timer.time = timer.defaultLongBreak
+        case ModeSession:
+            timer.time = timer.defaultSession
+            break
+        case ModeBreak:
+            timer.time = timer.defaultBreak
+            break
+        case ModeLongBreak:
+            timer.time = timer.defaultLongBreak
+            break
         default: {}
     }
 }
